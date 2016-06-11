@@ -19,7 +19,7 @@ keystone.init({
 	'brand': 'Blog',
 
 	'less': 'public',
-'static': 'public',
+	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'swig',
@@ -32,7 +32,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-
+	'mongo': process.env.MONGO_URI || "mongodb://localhost/test-db"
 });
 
 // Load your project's Models
